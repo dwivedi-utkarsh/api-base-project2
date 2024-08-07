@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+/* .pagination {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;  
+} */
+
+.pagination button.active {
+  background-color: #0056b3;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-control {
+  width: 60%;
+  padding: 10px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.user-detail {
+  padding: 20px;
+}
+
+.back-button {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .pagination button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .form-control {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  th, td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .pagination button {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .form-control {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+
+  .pagination button {
+    margin: 5px 0;
+  }
+}
+
+
+
+
+
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;  
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    padding: 8px;
+    margin: 3px;
+    font-size: 14px;
   }
 }
