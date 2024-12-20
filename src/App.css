@@ -54,10 +54,13 @@ th {
 }
 
 .form-control {
-  width: 60%;
+  width: 50%;
   padding: 10px;
   margin-top: 20px;
   box-sizing: border-box;
+  
+  
+
 }
 
 .user-detail {
@@ -122,16 +125,16 @@ th {
 
   .pagination {
     flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    
   }
 
   .pagination button {
     margin: 5px 0;
+    
   }
 }
-
-
-
-
 
 
 .pagination button {
@@ -140,12 +143,14 @@ th {
   border: none;
   padding: 10px;
   margin: 0 5px;
-  cursor: pointer;  
+  cursor: pointer;
+
 }
 
 @media (max-width: 600px) {
   .pagination {
     flex-wrap: wrap;
+
   }
 
   .pagination button {
